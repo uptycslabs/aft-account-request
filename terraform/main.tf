@@ -23,6 +23,8 @@ module "sandbox02" {
   custom_fields = {
     group = "non-prod"
   }
+
+  account_customizations_name = "sandbox"
 }
 module "sandbox03" {
   source = "./modules/aft-account-request"
@@ -49,4 +51,6 @@ module "sandbox03" {
   custom_fields = {
     group = "non-prod"
   }
+
+  account_customizations_name = "sandbox"
 }
