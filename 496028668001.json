@@ -1,0 +1,10 @@
+{
+   "id":"496028668001",
+   "account_name":"cqmanagement-account-2",
+   "email":"aws-qa+cloudquery-cqmanagement-account-2@uptycs.com",
+   "organizational_unit":"QA-testing",
+   "account_tags":{
+      "Environment":"Dev",
+      "Owner":"Giri/Umesh"
+   }
+}
