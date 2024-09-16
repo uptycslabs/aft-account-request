@@ -15,7 +15,7 @@ module "aft-import-sandbox" {
   }
 
   change_management_parameters = {
-    change_requested_by = "Account_Infra"
+    change_requested_by = "Account_Infra by Uptycs"
     change_reason       = "Import a Sandbox account in AFT"
   }
 
