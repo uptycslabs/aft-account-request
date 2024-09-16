@@ -1,5 +1,5 @@
 locals {
-    accounts = [
+    uptycsCSPMaccounts = [
         {
             accountId                 = "924967513276"
             accountName               = "cqmanagement-account-1"
@@ -30,7 +30,7 @@ locals {
 module "uptycs_aws_cspm" {
     source             = "./modules/cspm_integration/accounts"
     
-    for_each = { for account in local.accounts : account.accountName => account }
+    for_each = { for account in local.uptycsCSPMaccounts : account.accountName => account }
 
     upt_account_id     = "685272795239"
     integration_prefix = each.value.integrationPrefix
