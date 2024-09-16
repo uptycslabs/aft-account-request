@@ -6,16 +6,6 @@ locals {
             managedOrganizationalUnit = "Root"
         },
         {
-            accountName               = "cqmanagement-account-1"
-            accountEmail              = "aws-qa+cloudquery-cqmanagement-account-1@uptycs.com"
-            managedOrganizationalUnit = "AdditionalOU"
-        },
-        {
-            accountName               = "cqmanagement-account-2"
-            accountEmail              = "aws-qa+cloudquery-cqmanagement-account-2@uptycs.com"
-            managedOrganizationalUnit = "QA-testing"
-        },
-        {
             accountName               = "childaccount2"
             accountEmail              = "hpawar+2@uptycs.com"
             managedOrganizationalUnit = "QA-testing"
@@ -24,6 +14,16 @@ locals {
             accountName               = "childaccount3"
             accountEmail              = "hpawar+3@uptycs.com"
             managedOrganizationalUnit = "QA-OU2"
+        },
+        {
+            accountName               = "cqmanagement-account-1"
+            accountEmail              = "aws-qa+cloudquery-cqmanagement-account-1@uptycs.com"
+            managedOrganizationalUnit = "AdditionalOU"
+        },
+        {
+            accountName               = "cqmanagement-account-2"
+            accountEmail              = "aws-qa+cloudquery-cqmanagement-account-2@uptycs.com"
+            managedOrganizationalUnit = "QA-testing"
         }
     ]
 }
