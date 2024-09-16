@@ -3,7 +3,7 @@ locals {
         {
             accountId                 = "924967513276"
             accountName               = "cqmanagement-account-1"
-            accountEmail              = "aws-qa+cloudquery-cqmanagement-account-1@uptycs.com"
+            accountEmail              = "ppore+201@uptycs.com"
             managedOrganizationalUnit = "AdditionalOU"
             ssoUserEmail              = "gkondisetty@uptycs.com"
             ssoUserFirstName          = "Giri"
