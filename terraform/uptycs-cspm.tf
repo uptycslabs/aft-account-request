@@ -35,6 +35,4 @@ module "uptycs_aws_cspm" {
     upt_account_id     = "685272795239"
     integration_prefix = each.value.integrationPrefix
     external_id        = each.value.externalId
-
-    account_customizations_name = "sandbox"
 }
