@@ -1,6 +1,11 @@
 locals {
     accounts = [
         {
+            accountName               = "cloudquery-root-management"
+            accountEmail              = "aws-qa+cloudquery-root-management@uptycs.com"
+            managedOrganizationalUnit = "Root"
+        },
+        {
             accountName               = "cqmanagement-account-1"
             accountEmail              = "aws-qa+cloudquery-cqmanagement-account-1@uptycs.com"
             managedOrganizationalUnit = "AdditionalOU"
@@ -19,11 +24,6 @@ locals {
             accountName               = "childaccount3"
             accountEmail              = "hpawar+3@uptycs.com"
             managedOrganizationalUnit = "QA-OU2"
-        },
-        {
-            accountName               = "cloudquery-root-management"
-            accountEmail              = "aws-qa+cloudquery-root-management@uptycs.com"
-            managedOrganizationalUnit = "Root"
         }
     ]
 }
