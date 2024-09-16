@@ -3,7 +3,7 @@ locals {
         {
             accountId                 = "924967513276"
             accountName               = "cqmanagement-account-1"
-            accountEmail              = "ppore+201@uptycs.com"
+            accountEmail              = "aws-qa+cloudquery-cqmanagement-account-1@uptycs.com"
             managedOrganizationalUnit = "AdditionalOU"
             ssoUserEmail              = "gkondisetty@uptycs.com"
             ssoUserFirstName          = "Giri"
@@ -22,9 +22,9 @@ locals {
             ssoUserEmail              = "gkondisetty@uptycs.com"
             ssoUserFirstName          = "Giri"
             ssoUserLastName           = "Kondisetty"
-            accountTags              = { "Sandbox" = "cqmanagement-account-2 - 496028668001" }
-            changeRequestedBy        = "gkondisetty@uptycs.com"
-            changeReason              = "Import Account1 in AFT"
+            accountTags               = { "Sandbox" = "cqmanagement-account-2 - 496028668001" }
+            changeRequestedBy         = "gkondisetty@uptycs.com"
+            changeReason              = "Import cqmanagement-account-2 in AFT"
             customFieldsGroup         = "sandbox"
             accountCustomizationsName = "sandbox"
         },
@@ -53,6 +53,20 @@ locals {
             accountTags               = { "Sandbox" = "childaccount3 - 051315720372" }
             changeRequestedBy         = "gkondisetty@uptycs.com"
             changeReason              = "Import childaccount3 in AFT"
+            customFieldsGroup         = "sandbox"
+            accountCustomizationsName = "sandbox"
+        },
+        {
+            accountId                 = "646602658615"
+            accountName               = "cloudquery-root-management"
+            accountEmail              = "aws-qa+cloudquery-root-management@uptycs.com"
+            managedOrganizationalUnit = "Root"
+            ssoUserEmail              = "gkondisetty@uptycs.com"
+            ssoUserFirstName          = "Giri"
+            ssoUserLastName           = "Kondisetty"
+            accountTags               = { "Sandbox" = "cloudquery-root-management - 646602658615" }
+            changeRequestedBy         = "gkondisetty@uptycs.com"
+            changeReason              = "Import cloudquery-root-management in AFT"
             customFieldsGroup         = "sandbox"
             accountCustomizationsName = "sandbox"
         }
