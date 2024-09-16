@@ -1,9 +1,9 @@
 locals {
     accounts = [
         {
-            managedOrganizationalUnit = "Root"
             accountName               = "cloudquery-root-management"
             accountEmail              = "aws-qa+cloudquery-root-management@uptycs.com"
+            managedOrganizationalUnit = "Root"
         },
         {
             accountName               = "cqmanagement-account-1"
