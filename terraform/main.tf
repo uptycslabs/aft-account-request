@@ -84,5 +84,5 @@ module "aft_import_accounts" {
     group = each.value.customFieldsGroup
   }
 
-  // account_customizations_name = each.value.accountCustomizationsName
+  account_customizations_name = each.value.accountCustomizationsName
 }
