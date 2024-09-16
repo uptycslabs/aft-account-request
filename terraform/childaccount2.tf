@@ -23,5 +23,5 @@ module "aft-import-childaccount2" {
     group = "sandbox"
   }
 
-  account_customizations_name = "childaccount2"
+  //account_customizations_name = "childaccount2"
 }

@@ -23,5 +23,5 @@ module "aft-import-cqmanagement-account-2" {
     group = "sandbox"
   }
 
-  account_customizations_name = "sandbox"
+  //account_customizations_name = "sandbox"
 }
