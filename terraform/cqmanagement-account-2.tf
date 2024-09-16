@@ -1,4 +1,4 @@
-module "aft-import-sandbox" {
+module "aft-import-cqmanagement-account-2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {

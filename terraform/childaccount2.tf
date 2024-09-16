@@ -1,4 +1,4 @@
-module "aft-import-sandbox" {
+module "aft-import-childaccount2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
