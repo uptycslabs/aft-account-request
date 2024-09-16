@@ -1,20 +1,3 @@
-variable "accounts" {
-  description = "List of account details"
-  type = list(object({
-    accountEmail               = string
-    accountName                = string
-    managedOrganizationalUnit  = string
-    ssoUserEmail               = string
-    ssoUserFirstName           = string
-    ssoUserLastName            = string
-    accountTags                = map(string)
-    changeRequestedBy          = string
-    changeReason               = string
-    customFieldsGroup          = string
-    accountCustomizationsName  = string
-  }))
-}
-
 locals {
     accounts = [
         {
@@ -79,7 +62,7 @@ locals {
 module "aft_import_accounts" {
   source = "./modules/aft-account-request"
 
-  for_each = { for account in var.accounts : account.account_name => account }
+  for_each = { for account in local.accounts : account.accountName => account }
 
   control_tower_parameters = {
     AccountEmail              = each.value.accountEmail
@@ -90,7 +73,7 @@ module "aft_import_accounts" {
     SSOUserLastName           = each.value.ssoUserLastName
   }
 
-  account_tags = each.value.account_tags
+  account_tags = each.value.accountTags
 
   change_management_parameters = {
     change_requested_by = each.value.changeRequestedBy
@@ -101,5 +84,5 @@ module "aft_import_accounts" {
     group = each.value.customFieldsGroup
   }
 
-  // account_customizations_name = each.value.account_customizations_name
+  // account_customizations_name = each.value.accountCustomizationsName
 }
