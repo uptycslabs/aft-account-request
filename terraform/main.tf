@@ -1,26 +1,26 @@
-module "sandbox" {
+module "aft-import-sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "<ACCOUNT EMAIL>"
-    AccountName               = "sandbox-aft"
-    ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "<SSO EMAIL>"
-    SSOUserFirstName          = "Sandbox"
-    SSOUserLastName           = "AFT"
+    AccountEmail              = "aws-qa+cloudquery-cqmanagement-account-2@uptycs.com"
+    AccountName               = "cqmanagement-account-2"
+    ManagedOrganizationalUnit = "QA-testing"
+    SSOUserEmail              = "gkondisetty@uptycs.com"
+    SSOUserFirstName          = "Giri"
+    SSOUserLastName           = "Kondisetty"
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Sandbox" = "Sandbox-01"
   }
 
   change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+    change_requested_by = "Account_Infra"
+    change_reason       = "Import a Sandbox account in AFT"
   }
 
   custom_fields = {
-    group = "non-prod"
+    group = "sandbox"
   }
 
   account_customizations_name = "sandbox"
