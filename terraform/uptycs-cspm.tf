@@ -1,5 +1,5 @@
 locals {
-  accounts = [
+  UptycsCSPMaccounts = [
     {
       accountName       = "cloudquery-root-management"
       integrationPrefix = "debug-11"
@@ -29,14 +29,13 @@ locals {
 }
 
 provider "aws" {
-  alias = "management"
   region = "us-east-1"
 }
 
 provider "aws" {
-  for_each = { for account in local.accounts : account.accountName => account }
+  for_each = { for account in local.UptycsCSPMaccounts : account.accountName => account }
   
-  alias = each.key
+  alias = each.value.integrationPrefix
   region = "us-east-1"
 
   assume_role {
@@ -48,10 +47,10 @@ provider "aws" {
 module "uptycs_aws_cspm" {
   source = "https://uptycs-terraform-dev.s3.amazonaws.com/terraform-aws-uptycs.zip//modules/cspm_integration/accounts"
 
-  for_each = { for account in local.accounts : account.accountName => account }
+  for_each = { for account in local.UptycsCSPMaccounts : account.accountName => account }
 
   providers = {
-    aws = aws.each.key  # This ensures Terraform uses the correct provider alias for each account
+    aws = aws[each.value.integrationPrefix]
   }
 
   upt_account_id     = "685272795239"
